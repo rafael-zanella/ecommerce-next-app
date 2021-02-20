@@ -1,11 +1,19 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import styled from 'styled-components';
+
+
+const Container = styled.div`
+
+  /* background: red; */
+
+`;
 
 const HomePage = (props) => {
   return props.products.map(product => {
     return (
-      <div key={product.slug}>
+      <Container key={product.slug}>
 
         <Link href={product.slug}>
           <a>
@@ -15,7 +23,7 @@ const HomePage = (props) => {
         
         <p>{product.description}</p>
         <p>${product.price / 100}</p>
-      </div>
+      </Container>
     )
   })
 }
