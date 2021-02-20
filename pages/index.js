@@ -1,6 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 const HomePage = (props) => {
   return props.products.map(product => {
